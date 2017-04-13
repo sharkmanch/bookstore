@@ -1,20 +1,51 @@
-<html>
+<html ng-app="myApp">
 <head>
     <title>Bookstore</title>
-//we gonna need bootstrap, angular-route, jquery, so we gonna need bower < which is a client side package manager just like npm for the server side>
+<!-- FE-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!--FE we gonna need bootstrap, angular-route, jquery, so we gonna need bower < which is a client side package manager just like npm for the server side> -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+<!--FE-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bookstore</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/books/add">Add Book</a></li>
+                            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!--everything that goes thru angular is gonna be in ng-view -->
+            <div ng-view></div>
+    </div>
+    </div>
 
-// get bower install --save bootstrap angular angular-route jquery >> to install them and add links to here...
+</div><!-- /.container -->
+
+<!-- FE get bower install --save bootstrap angular angular-route jquery >> to install them and add links to here...-->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/angular/dist/angular.js"></script>
-<script src="/bower_components/angular-route/dist/angular-route.js"></script>
-<script src="/bower_components/bootstrap/dist/bootstrap.js"></script>
-<script src="/app.js"></script>
-<script src="/controllers/books.js"></script>
-<script src="/controllers/genres.js"></script>
+    <script src="/bower_components/angular/dist/angular.js"></script>
+    <script src="/bower_components/angular-route/dist/angular-route.js"></script>
+    <script src="/bower_components/bootstrap/dist/bootstrap.js"></script>
+    <script src="/app.js"></script>
+    <script src="/controllers/books.js"></script>
+    <script src="/controllers/genres.js"></script>
 
 
 </body>
