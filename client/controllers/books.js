@@ -8,7 +8,8 @@ myApp.controller('BooksController',['$scope', '$http', '$location', '$routeParam
     console.log('BooksController loaded...');
     $scope.getBooks = function() {
         $http.get('/api/books').then(function (response) {
-            $scope.books = response;
+            console.log(response)
+            $scope.books = response.data;
         });
     }
 }]);
