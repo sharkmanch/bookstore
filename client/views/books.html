@@ -1,4 +1,4 @@
-<div class="panel panel-default" >
+<div class="panel panel-default" ng-init="getBooks()">
     <div class="panel-heading">
         <h3 class="panel-title">Latest Books</h3>
     </div>
@@ -9,19 +9,13 @@
                     <div class="col-md-6">
                         <h4>{{book.title}}</h4>
                         <p>{{book.description}}</p>
-                        <a class="btn btn-primary" href="#/books/details/{{books._id}}">View Details</a>
-
+                        <a class="btn btn-primary" href="#/books/details/{{book._id}}">View Details</a>
                     </div>
                     <div class="col-md-6">
                         <img class="thumbnail" src="{{book.image_url}}">
-
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
